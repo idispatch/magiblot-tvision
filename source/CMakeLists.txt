@@ -1,6 +1,9 @@
 # Turbo Vision sources.
 
-file(GLOB_RECURSE TVSOURCE "${CMAKE_CURRENT_LIST_DIR}/*/*.cpp")
+file(GLOB_RECURSE TVSOURCE "${CMAKE_CURRENT_LIST_DIR}/platform/*.cpp")
+file(GLOB_RECURSE TVSOURCE "${CMAKE_CURRENT_LIST_DIR}/tvision/nm/*.cpp")
+file(GLOB_RECURSE TVSOURCE "${CMAKE_CURRENT_LIST_DIR}/tvision/ser/*.cpp")
+file(GLOB_RECURSE TVSOURCE "${CMAKE_CURRENT_LIST_DIR}/tvision/*.cpp")
 list(REMOVE_ITEM TVSOURCE "${CMAKE_CURRENT_LIST_DIR}/tvision/geninc.cpp")
 
 add_library(${PROJECT_NAME} STATIC ${TVSOURCE})
